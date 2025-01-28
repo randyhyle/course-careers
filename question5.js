@@ -18,4 +18,21 @@ function mathIsFun(numberString) {
     return largest + second
 }
 
+function bruteForce(numberString) {
+    const numbers = numberString.split("|")
+    let maxSum = undefined;
+
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = i + 1; j < numbers.length; j++) {
+            let sum = Number(numbers[i]) + Number(numbers[j]);
+
+            if (sum > maxSum || maxSum === undefined) {
+                maxSum = sum;
+            }
+        }
+    }
+    return maxSum
+}
+
 console.log(mathIsFun("12|13|-4|5|"))
+console.log(bruteForce("12|13|-4|5|"))
