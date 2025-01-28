@@ -19,6 +19,10 @@ function mathIsFun(numberString) {
 }
 
 function bruteForce(numberString) {
+    /*
+    This is the brute force approach to question 5.
+    Runs in O(n)^2 constant time and O(1) space complexity
+    */
     const numbers = numberString.split("|")
     let maxSum = undefined;
 
